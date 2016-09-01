@@ -1,0 +1,274 @@
+* {
+  position:relative;
+
+}
+
+@font-face {
+  font-family: earthorbiter;
+  src:url("/font/earthorbiter.ttf");
+}
+
+@font-face {
+  font-family: robotoBold;
+  src:url("/font/Roboto-Bold.ttf");
+}
+
+::-webkit-input-placeholder {
+  color: #397EEC;
+  font-family: earthorbiter;
+}
+
+html {
+  height: 100%;
+  background-color: #F2F2F2;
+}
+
+body {  
+  height:100%;
+  min-height: 100%;
+  font-family: robotoBold;
+  display: initial;
+  margin: auto;
+}
+
+img {
+  height:100px;
+  background-color: bisque;
+  border-radius: 50%;
+  
+}
+
+.imgLogo {
+  margin:auto;
+  width:250px;
+  padding-top:11px;
+}
+
+.welcome {
+  font-family: earthorbiter;
+  text-align:center;
+  opacity:0.95;
+  color: #0059B3;
+  background:#F2F2F2;
+}
+
+.logo {
+  height:54px;
+  top: -8px;
+  width:60px;
+  float:left;
+  padding-top:14px;
+}
+
+.firstPage {
+  box-shadow: 5px 5px 5px #A3BEE9;
+  border:  8px #1B417C;
+  box-sizing: border-box;
+  width:30%;
+  padding:20px;
+  min-width: 300px;
+  clear: both;
+  background:#FFFFFF;
+  text-align:center;
+  margin:auto;
+  margin-top:10%;
+}
+
+.username {
+  background-color:#F2F2F2;
+  color:#9e9696;
+  border:1px solid #329924;
+  height:30px;
+  width:75%;
+  padding:5px;
+  margin: auto;
+}
+
+.nextLine {
+  top:10px;
+}
+
+.login {
+  border: 2px #0059B3;
+  border-radius: 5px;
+  height:35px;
+  width:30%;
+  color: #FFFFFF;
+  background-color:#0059B3;
+  margin:auto;
+  display: block;
+  margin-top: inherit;
+  text-align:center;
+  cursor:pointer;
+}
+
+.newUser {
+  text-align:center;
+  top: 34px;
+  float: right;
+}
+
+.optionContainer {
+  top:30px;
+}
+
+.option {
+  text-align:center;
+  right:9px;
+}
+
+footer {
+  text-align:center;
+  background-color:#F2F2F2;
+  width: 100%;
+  bottom: 0%;
+  position: fixed;
+}
+
+.header {
+  background-color: #FFFFFF;
+  width: 100%;
+  opacity: 0.8;
+  font-size: 24px;
+}
+
+.container {
+  margin: 0 auto;
+  margin-top:5%;
+  background-color: #FFFFFF;
+  width:50%;
+  min-width: 300px;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+ #register {
+  padding: 20px;
+  text-align: center;
+  display: block;
+  font-family: earthorbiter;
+  font-size: 24px;
+ }
+
+ .block {
+  margin-top: 20px;
+ }
+
+ .inputField {
+  width:40%;
+  float: left;
+ }
+
+ .input { 
+  border: 1px solid #000000;
+  height:15px;
+  width: 50%;
+  background-color: #FFFFFF;
+  padding: 5px;
+ }
+
+ .address {
+  height: 40px;
+ }
+
+ .sameAddress {
+    margin-left: 40%;
+ }
+
+.gender {
+  margin-left: 40%;
+}
+
+.box {
+  height: 20px;
+  width: 20px;
+}
+
+.signUpBlock {
+  text-align: center;
+
+}
+
+.signUp {
+  border: 2px #0059B3;
+  border-radius: 5px;
+  height:35px;
+  width:100px;
+  color: #FFFFFF;
+  display: inline-block;
+  background-color:#0059B3;
+  cursor:pointer;
+}
+
+.errorMessage {
+  float:right;
+  width:60%;
+  font-style: italic;
+  font-size: 12px;
+  text-align: left;
+  color: #DB0808;
+}
+
+.errorBlock {
+  color: #F21818;
+  text-align: center;
+  
+}
+
+.successBlock {
+  color: #2EAF11;
+  text-align: center;
+}
+
+.logout {
+  width: 70px;
+  float:right;
+  height: 25px;
+  margin-top: 3%;
+  border-radius: 3px;
+  text-align: center;
+  display: inline-block;
+  padding: 1%;
+  background-color: #FFFFFF;
+}
+.search {
+  height: 30px;
+  border-radius: 2px;
+  background-color: #BF737E;
+}
+
+.profilePic {
+  height: 100px;
+  border-style: solid;
+  background-color: #FFFFFF;
+  width: 100px;
+}
+
+.foundIcon {
+  padding: 3%;
+  display: inline-block;
+}
+
+.homeButton {
+  float: right;
+  height: 50px;
+  z-index: 1;
+  width: 50px;
+}
+
+a {
+    
+    transition: all 0.3s ease;
+    color: #000000; 
+}
+
+.searchBar {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 120px;
+}

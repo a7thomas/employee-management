@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="/images/aa.png" rel="shortcut icon"/>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css"/>
+    <title>Registration form</title>
+
+    <input type="hidden" id="refreshed" value="no">
+    <script type="text/javascript">
+      onload=function(){
+        var e=document.getElementById("refreshed");
+        if(e.value=="no")e.value="yes";
+        else{e.value="no";location.reload();}
+      }
+    </script>
+  </head>
+  <% include header %>  
+  <body>
+    <form class="container" name="newRegister" id="formRegister" enctype="multipart/form-data" method="post">
+        <div id="register">Register here</div>
+        <div class="errorBlock"><%= errorBlock %></div>
+        <div class="successBlock"><%= successBlock %></div>
+        <div class="block">
+          <label class="inputField">Name</label>
+            <input class="input"  type="text" name="name"/>
+            <span id="firstNameError"  class="errorMessage"></span>
+        </div>  
+        <div class="block"> 
+          <label class="inputField">Email</label>
+          <input class="input" type="email" name="email" />
+          <span id="emailError"  class="errorMessage"></span>
+        </div>
+        <div class="block">
+          <label class="inputField">Designation</label>
+            <input class="input"  type="text" name="designation"/>
+            <span id="designationError"  class="errorMessage"></span>
+        </div> 
+        <div class="block"> 
+          <label class="inputField">Mobile no</label>
+          <input class="input" type="text" name="phNo" id="phNo" onblur="validatePhNo()" />
+          <span id="phNoError"  class="errorMessage"></span>
+        </div>
+        <div class="block gender ">
+          <input type="radio" name="gender" id="male" value="male"  checked="true" />
+            <label for ="male">Male</label>
+          <input type="radio" name="gender"  value="female" id="female" />
+            <label  for ="female">Female</label>
+        </div>
+        <div class="block gender ">
+          <input type="radio" name="userType" id="user" value="user"  checked="true" />
+            <label for ="user">user</label>
+          <input type="radio" name="userType"  value="admin" id="admin" />
+            <label  for ="admin">admin</label>
+        </div>  
+        <div class="block"> 
+          <label class="inputField">Image</label>
+          <input class="input" type="file" accept="image/*" name="image"/>
+          <span id="imageError"  class="errorMessage"></span>
+        </div>  
+        <div class="signUpBlock block">
+          <input class="signUp" type="button" value="Create" onclick="validateRegister()" />
+        </div>  
+    </form>
+    <script src="/javascripts/validation.js" ></script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<link href="/images/aa.png" rel="shortcut icon">
+<title>User Login Page</title>
+<link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+<script src="./javascripts/validation.js"></script>
+
+<form class="firstPage" name="loginForm" id="formLogin" method="post">
+  <img src="/images/personal.png" alt="user" style="margin:auto;display:block" />
+  <div class="errorBlock">
+    {{errorBlock}}
+  </div>
+  <div>
+    Email
+  </div>
+  <input class="username" type="email" name="username" placeholder="Username" ng-model="username" ng-init="username=''" required="true" />
+  <div class="errorBlock">
+    <span ng-show="loginForm.username.$touched && loginForm.username.$invalid">enter valid email</span>
+  </div>
+  <div>Password</div>
+  <input class="username nextLine" type="password" name="password" placeholder="Password" ng-model="password" required="true" />
+  <input class="login" type="button" value="Login" ng-click="login()" />
+  <div class="forgotPassword">
+    <a href="#/forgot-password">Forgot password?</a>
+  </div>
+</form>

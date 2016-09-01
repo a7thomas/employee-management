@@ -1,0 +1,20 @@
+<body>
+    <div class="heading">
+      <ul>
+        <table>
+          <tr class="tableHead">
+            <th>Date</th>
+            <th>Name</th>
+            <th>Venue</th>
+            <th>Description</th>
+          </tr>
+            <tr ng-repeat="program in programs| orderBy:'programDate':reverse">
+              <td>{{program.programDate|date:'dd/MM/yyyy'}}</td>
+              <td>{{ program.programName }}</td>
+              <td>{{program.programVenue}}</td>
+              <td>{{program.programDescription }}</td>
+            </tr> 
+        </table>  
+      </ul>
+    </div>   
+</body>  

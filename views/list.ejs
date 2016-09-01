@@ -1,0 +1,43 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"> 
+    <link href="/images/aa.png" rel="shortcut icon"/>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/styleProfile.css"/>
+
+    <input type="hidden" id="refreshed" value="no">
+    <script type="text/javascript">
+      onload=function(){
+        var e=document.getElementById("refreshed");
+        if(e.value=="no")e.value="yes";
+        else{e.value="no";location.reload();}
+      }
+    </script>
+  </head>
+  <% include header %>
+  <title>Employee database</title>
+  <body>
+    <div style="margin-top:5%">
+      <ul>
+        <table>
+          <tr>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Email</th>
+            <th>Designation</th>
+            <th><img style="height:18px" src="/images/trashcan-128.png"></th>
+          </tr>
+          <% for(var i=0; i< d.length; i++) { %>
+            <tr>
+              <td><%= d[i].personalInfo.firstName %></td>
+              <td><%= d[i].personalInfo.lastName %></td>
+              <td><%= d[i].email %></td>
+              <td><%= d[i].designation %></td>
+              <td><a href="/admin/list/<%= d[i].email %>"><img src="/images/1469791490_Close_Box_Red.png" alt="user" style="height:20px"></a></td>
+            </tr> 
+          <% } %>
+        </table>  
+      </ul>
+    </div>  
+  </body>
+</html> 

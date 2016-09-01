@@ -1,0 +1,254 @@
+
+@font-face {
+  font-family: robotoI;
+  src:url("/font/Roboto-Italic.ttf");
+}
+
+body {
+  height: 100%;
+  min-height:100%;
+  display: initial;
+  margin: auto;
+  font-family: robotoI;
+}
+
+html {
+  height: 100%;
+  background-color: #F2F2F2;
+}
+
+.imgicon {
+  height: 20px;
+}
+
+.change {
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #4CAF50;
+}
+
+.buttonicon {
+  outline: none;
+  background-color: transparent;
+  border-style: none;
+}
+
+.profilePic {
+  margin-top: 10%;
+  margin-left: 5%;
+  height: 170px;
+  width: 82%;
+  background-color: #FFFFFF;
+} 
+
+footer {
+  text-align:center;
+  background-color:#F2F2F2;
+  width: 100%;
+  clear: both;
+  bottom: 0%;
+  position: fixed;
+}
+
+.search {
+  background-color: #EA7979;
+  height:30px;
+  border-radius: 3px;
+}
+
+.searchInput {
+  width:82%;
+  padding: 2px;
+  opacity: 0.8;
+}
+
+.field:hover {
+    background-color: #AA3A3A;
+}
+
+.view{
+  height: 100%;
+}
+
+.sidebar{
+  height:100%;
+  display:inline-block;
+  width:17%
+}
+
+.left {
+  background-color: #778899;
+  clear: both;
+  float: left; 
+  height: 100%;
+  width: 100%;
+  margin-left: 1%;
+ }
+
+.right {
+  float: right;
+  margin-right: 2%;
+  width: 78%;
+  height: 100%;
+ }
+
+.designation {
+  font-style: italic;
+  font-size: 18px;
+}
+
+.intro {
+  margin-top: 5%;
+  font-size: 24px;
+  font-family: robotoBold;
+  text-transform: capitalize;
+  border-bottom: 3px solid;
+}
+
+.heading {
+  margin-top: 5%;
+  font-size: 20px;
+  font-weight: bolder;
+  font-style: italic;
+}
+
+.subHeading {
+  margin-top: 5%;
+  font-style: bold;
+}
+
+.mainWrapper {
+  padding: 1%;
+  margin-top: 5%;
+  overflow: hidden;
+}
+
+label {
+  width: 100%;
+}
+
+.logout {
+  width: 70px;
+  float:right;
+  height: 25px;
+  border-radius: 3px;
+  margin-top: 3%;
+  text-align: center;
+  display: inline-block;
+  padding: 1%;
+  background-color: #FFFFFF;
+}
+
+.homeButton {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+}
+
+ a:link, a:visited {
+  text-decoration: none;
+  color: #000000;
+}
+
+.tableHead {
+  background-color: rgba(35, 83, 158, 0.73);
+}
+
+table, th {
+  padding: 1%;
+  text-align: left;
+  margin: auto;
+  font-size: 18px;
+}
+
+td {
+  padding: 1%;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-collapse: collapse;
+}
+
+.table {
+  margin:inherit;
+}
+
+table {
+  background-color: #F2F2F2;
+  min-width: 300px;
+  width: 80%;
+}
+
+.input {
+  padding: 1%;
+  text-transform: capitalize;
+  font-size: 18px;
+  width: 98%;
+
+  border-style: none;
+  background-color: #F2F2F2;
+}
+
+.value {
+  width: 30%;
+}
+
+.edit {
+  outline: none;
+  clear: both;
+  float: left;
+  border-style: none;
+  color: #FFFFFF;
+  background-color: #23539e;
+  border-radius: 15px;
+  height: 35px;
+  width: 90px;
+  font-size: 24px;
+  text-align: center;
+}
+
+a {
+  transition: all 0.3s ease;
+  color: white;
+}
+
+a:active {
+  color: #FFFFFF;
+}
+
+.box {
+  font-size: 30px;
+  text-align: center;
+  margin:auto;
+  margin-top:10%;
+  padding: 2%;
+  clear: both;
+  background-color: #FFFFFF;
+  padding: 2%;
+}
+
+.signUp {
+  border: 2px #0059B3;
+  border-radius: 5px;
+  height:35px;
+  width:100px;
+  display: none;
+  color: #FFFFFF;
+  background-color:#1B277E;
+  cursor:pointer;
+}
+
+.errorMessage {
+  width:60%;
+  font-style: italic;
+  font-size: 12px;
+  text-align: left;
+  color: #DB0808;
+}
+
+.inputFields {
+  width: 82px;
+  color: transparent;
+}

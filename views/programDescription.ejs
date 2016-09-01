@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="/images/aa.png" rel="shortcut icon"/>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/styleProfile.css"/>
+    <title>Program list</title>
+    <input type="hidden" id="refreshed" value="no">
+    <script type="text/javascript">
+    onload=function(){
+      var e=document.getElementById("refreshed");
+      if(e.value=="no")e.value="yes";
+      else{e.value="no";location.reload();}
+    }
+    </script>
+  </head>  
+  <% include header %>
+  <body>
+      <div style="margin-top:5%">
+        <ul>
+          <table>
+            <tr>
+              <th style="width:40px">Date</th>
+              <th>Name</th>
+              <th>Venue</th>
+              <th>Description</th>
+            </tr>
+            <% for(var i=0; i< d.length; i++) { %>
+              <tr>
+                <td><%= d[i].programDate.getDate() %>/<%= d[i].programDate.getMonth() %>/<%= d[i].programDate.getFullYear() %></td>
+                <td><%= d[i].programName %></td>
+                <td><%= d[i].programVenue%></td>
+                <td><%= d[i].programDescription %></td>
+              </tr> 
+            <% } %>
+          </table>  
+        </ul>
+      </div>   
+  </body>  

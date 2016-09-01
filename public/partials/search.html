@@ -1,0 +1,13 @@
+<link rel="stylesheet" type="text/css" href="/stylesheets/style.css"/>
+<ul ng-repeat="user in users | filter : {'userType': 'user'}" ng-controller="searchController" style="display:inline-block">
+  <a ng-href="#/search/{{user._id }}">  
+    <div class="foundIcon">
+      <div>
+        <img ng-src= "/uploads/{{user.imagePath}}" class="profilePic" />
+      </div>
+      <div class="truncate">
+          {{user.personalInfo.firstName}} 
+      </div>
+    </div>
+  </a>  
+</ul>

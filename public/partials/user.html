@@ -1,0 +1,72 @@
+<div sidebar class="sidebar"></div>
+  <div class="right" >  
+    <div class="intro">
+      <div>{{details.personalInfo.firstName }}</div>
+      <div class="designation">{{details.designation}}</div>
+    </div>
+    <form name="updateProfile" id="updateProfile" method="post" action="/user/viewprofile">
+      <div class="fieldName">
+        <h2>Personal information</h2>
+        <table class="table">
+          <tr>
+            <th>
+              <input class="edit" type="button" name="edits" value="Edit" onclick="edit()"/>
+             
+            </th>
+          </tr>
+          <tr>
+            <td>First name:</td>
+            <td>
+              <input class="input" type="text" id="input" name="firstName" ng-model='details.personalInfo.firstName' readonly="true" required />
+              <div class='errorMessage' ng-show="updateProfile.firstName.$touched && updateProfile.firstName.$invalid">Field required.</div>
+            </td>
+          </tr>
+          <tr>
+            <td>Last name:</td>
+            <td>
+              <input class="input" type="text" name="lastName" ng-model='details.personalInfo.lastName' readonly="true" required />
+              <div class='errorMessage' ng-show="updateProfile.lastName.$touched && updateProfile.lastName.$invalid">Field required.</div>
+            </td>
+          </tr>
+          <tr>
+            <td>Email:</td>
+            <td>{{details.email}}</td>
+          </tr>
+          <tr>
+            <td>Gender:</td>
+            <td>{{details.personalInfo.gender}}</td>
+          </tr>
+          <tr>
+            <td>Date of birth:</td>
+            <td>
+              <input class="input" type="date" name="dob" ng-model='dob' readonly="true"/>
+            </td>
+          </tr>
+          <tr>
+            <td>Address:</td>
+            <td>
+              <textarea class="input" name="address" readonly="true" required="true" ng-model="details.personalInfo.address">{{details.personalInfo.address}}</textarea>
+              <div class='errorMessage' ng-show="updateProfile.address.$touched && updateProfile.address.$invalid">Field required.</div>
+            </td>
+          </tr>
+          <tr>
+            <td>Mobile no:</td>
+            <td>
+              <input class="input" type="text" name="phNo" ng-model='details.personalInfo.mobileNo' readonly="true" onblur="validatePhNo()" id="phNo"/>
+              <span id="phNoError"  class="errorMessage"></span>
+            </td>
+          </tr>
+          <th>
+            <div class="signUpBlock block">
+              <input class="signUp" type="button" id="update" value="Update" ng-click="updatePersonal()"/>
+            </div>
+          </th>
+        </table>
+      </div>  
+    </form>  
+</div>
+<style type="text/css">
+  footer{
+    position: relative;
+  }
+</style>

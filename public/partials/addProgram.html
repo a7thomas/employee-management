@@ -1,0 +1,30 @@
+<link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+<form method="post" name="newRegister">
+  <div class="container">
+  <div class="errorBlock">{{errorBlock}}</div>
+  <div class="successBlock">{{successBlock}}</div>
+    <div class="block">
+      <label class="inputField">Program name</label>
+      <input class="input" type="text" name="programName" ng-model="programName" required="true" />
+      <span class='errorMessage' ng-show="newRegister.programName.$touched && newRegister.programName.$invalid">Cannot be left blank</span>
+    </div>
+    <div class="block">
+      <label class="inputField">Description</label>
+      <textarea class="input" name="description" ng-model="description" required="true"></textarea>
+      <span class='errorMessage' ng-show="newRegister.description.$touched && newRegister.description.$invalid">Cannot be left blank</span>
+    </div>
+    <div class="block">
+      <label class="inputField">Venue</label>
+      <input class="input" type="text" name="venue" ng-model="venue" required="true" />
+      <span class='errorMessage' ng-show="newRegister.venue.$touched && newRegister.venue.$invalid">Cannot be left blank</span>
+    </div>
+    <div class="block">
+      <label class="inputField">Date</label>
+      <input class="input" type="Date" name="date" ng-model="date" required="true" />
+      <span class='errorMessage' ng-show="newRegister.date.$touched && newRegister.date.$invalid">Cannot be left blank</span>
+    </div>
+    <div class="signUpBlock block">
+      <input class="signUp" type="button" value="Create" ng-click="add()" />
+    </div>
+  </div>
+</form>

@@ -1,0 +1,27 @@
+<ul class="topnav" id="myTopnav">
+  <div style="float:right">
+    <li><a href="#/">HOME</a></li>
+    <li><a href="#/gallery">GALLERY</a></li>
+    <li><a ng-href="#/{{profile}}">PROFILE</a></li>
+    <li><a ng-href="#/{{mode}}">{{mode.toUpperCase();}}</a></li>
+    <li>
+      <form ng-controller="searchController" class="searchBox">
+        <input type="text" name="search" class="searchBarA" placeholder="Search"  ng-init="find=null" ng-model='find'>
+        <button class="but" ng-click="search()">
+          <img src= "/images/1471440794_icon-111-search.png" alt="img" class="icn"/>
+        </button>
+      </form>
+      <div class="errBlock">{{err}}</div>
+    </li>
+    <li class="icon">
+      <a href="javascript:void(0);" onclick="myFunction()">☰</a>
+    </li>
+  </div>
+</ul>
+
+<div id="alert1" class="model">
+  <div class="model-content">
+    <span class="close" onclick="alert()">x</span>
+    <p>Not found</p>
+  </div>
+</div>

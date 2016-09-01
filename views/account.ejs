@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link href="/images/aa.png" rel="shortcut icon" />
+  <script src="/javascripts/profileValidation.js"></script>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/styleProfile.css" />
+  <input type="hidden" id="refreshed" value="no">
+  <script type="text/javascript">
+    onload = function() {
+      var e = document.getElementById("refreshed");
+      if (e.value == "no") e.value = "yes";
+      else {
+        e.value = "no";
+        location.reload();
+      }
+    }
+  </script>
+</head>
+<title>Account</title>
+<% include header %>
+
+  <body>
+    <% include sideBar %>
+      <div class="right">
+        <form method="post">
+          <div class="intro">
+            <div>
+              <%= d.personalInfo.firstName.replace(/^./, function(str){ return str.toUpperCase(); }); %>
+            </div>
+            <div>
+              <%= d.designation %>
+            </div>
+          </div>
+          <div class="fieldName">
+            <h2>Accounts information</h2>
+            <form method="post">
+              <table class="table">
+                <tr>
+                  <th><input class="edit" type="button" name="edits" value="edit" onclick="edit()" /></th>
+                </tr>
+                <tr>
+                  <td>Account no:</td>
+                  <td><input class="input" type="text" name="accountNo" value="<%= d.accounts.acNo %>" readonly="true" /></td>
+                </tr>
+                <tr>
+                  <td>Bank name:</td>
+                  <td><input class="input" type="text" name="bankName" value="<%= d.accounts.bankName %>" readonly="true" /></td>
+                </tr>
+                <tr>
+                  <td>Pan no:</td>
+                  <td><input class="input" type="text" name="panNo" value="<%= d.accounts.panNo %>" readonly="true" /></td>
+                </tr>
+              </table>
+              <div class="signUpBlock block">
+                <input class="signUp" type="submit" id="update" value="Update" />
+              </div>
+            </form>
+          </div>
+      </div>
+  </body>
+
+</html>

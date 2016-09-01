@@ -1,0 +1,55 @@
+<div sidebar class="sidebar"></div>
+<div class="right">
+  <div class="intro">
+    <div>{{details.personalInfo.firstName }}</div>
+    <div class="designation">{{details.designation}}</div>
+  </div>
+  <div class="fieldName">
+    <h2>Education</h2>
+    <form method="post" name="updateProfile">
+      <table class="table">
+        <tr>
+          <th><input class="edit" type="button" name="edits" value="Edit" onclick="edit()" /></th>
+        </tr>
+        <tr>
+          <td>Tenth grade:(in %)</td>
+          <td>
+            <input class="input" type="number" name="tenthPercentage" ng-model="details.education.tenthPercentage" readonly="true" ng-maxlength="2" />
+            <span class='errorMessage' ng-show="updateProfile.tenthPercentage.$touched && updateProfile.tenthPercentage.$invalid">Invalid</span>
+          </td> 
+        </tr>
+        <tr>
+          <td>+2 grade:(in %)</td>
+          <td>
+            <input class="input" type="number" name="twelfthPercentage" ng-model="details.education.twelfthPercentage" readonly="true" ng-maxlength="2"/>
+            <span class='errorMessage' ng-show="updateProfile.twelfthPercentage.$touched && updateProfile.twelfthPercentage.$invalid">Invalid</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Degree</td>
+          <td>
+            <input class="input" type="text" name="degree" ng-model="details.education.degree" readonly="true"  required="true" />
+            <span class='errorMessage' ng-show="updateProfile.degree.$touched && updateProfile.degree.$invalid">Invalid</span>
+          </td>
+        </tr>
+        <tr>
+          <td>other</td>
+          <td>
+            <input class="input" type="text" name="other" ng-model="details.education.other" readonly="true" required="true" />
+            <span class='errorMessage' ng-show="updateProfile.other.$touched && updateProfile.other.$invalid">Invalid</span>
+          </td>
+        </tr>
+        <tr>
+          <th>
+            <div class="signUpBlock block">
+              <input class="signUp" type="submit" id="update" value="Update" ng-click="updateEducation()"/>
+            </div>
+          </th>
+        </tr>
+      </table>
+      <div class="signUpBlock block">
+        <input class="signUp" type="submit" id="update" value="Update" ng-click="updateEducation()"/>
+      </div>
+    </form>  
+  </div>
+</div>

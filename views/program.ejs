@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="/images/aa.png" rel="shortcut icon"/>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css"/>
+    <title>Registration form</title>
+    <input type="hidden" id="refreshed" value="no">
+    <script type="text/javascript">
+    onload=function(){
+      var e=document.getElementById("refreshed");
+      if(e.value=="no")e.value="yes";
+      else{e.value="no";location.reload();}
+    }
+    </script>
+  </head>  
+  <% include header %>
+  <body>
+    <form method="post">
+      <div class="container">
+        <div class="errorBlock"><%= errorBlock %></div>
+        <div class="successBlock"><%= successBlock %></div>
+        <div class="block">
+          <label class="inputField">Program name</label>
+          <input class="input"  type="text" name="programName"/>
+        </div>  
+        <div class="block"> 
+          <label class="inputField">Description</label>
+          <textarea class="input" name="description"></textarea>
+        </div>
+        <div class="block">
+          <label class="inputField">Venue</label>
+          <input class="input"  type="text" name="venue"/>
+        </div>
+        <div class="block">
+          <label class="inputField">Date</label>
+          <input class="input"  type="Date" name="date"/>
+        </div>
+        <div class="signUpBlock block">
+          <input class="signUp" type="submit" value="Create"/>
+        </div>
+      </div>   
+    </form>    
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+<form class="container" name="newRegister" id="formRegister" enctype="multipart/form-data" method="post" novalidate ng-submit="newRegister.$valid && add(pic)">
+  <div id="register">Register here</div>
+  <div class="errorBlock">{{errorBlock}}</div>
+  <div class="successBlock">{{successBlock}}</div>
+  <span class='errorMessage' novalidate ng-show="newRegister.$submitted && newRegister.$invalid">All fields are required</span>
+  <div class="block">
+    <label class="inputField" ng-init="name=''">Name</label>
+    <input class="input" type="text" name="name" required="true" ng-model="name" />
+    <span class='errorMessage' ng-show="newRegister.name.$touched && newRegister.name.$invalid">Required</span>
+  </div>
+  <div class="block">
+    <label class="inputField" ng-init="email=''">Email</label>
+    <input class="input" type="email" name="email" ng-model='email' />
+    <span class='errorMessage' ng-show="newRegister.email.$touched && newRegister.email.$invalid">Invalid</span>
+  </div>
+  <div class="block">
+    <label class="inputField">Designation</label>
+    <input class="input" type="text" name="designation" ng-model='designation' required />
+    <span class='errorMessage' ng-show="newRegister.designation.$touched && newRegister.designation.$invalid">Required</span>
+  </div>
+  <div class="block">
+    <label class="inputField">Mobile no</label>
+    <input class="input" type="text" name="phNo" id="phNo" onblur="validateMobileNo()" ng-model='phNo' required="true" />
+    <span id="phNoError" class="errorMessage"></span>
+  </div>
+  <div class="block gender " ng-init="gender='male'">
+    <input type="radio" name="gender" id="male" value="male" ng-model="gender" />
+    <label for="male">Male</label>
+    <input type="radio" name="gender" value="female" id="female" ng-model="gender" />
+    <label for="female">Female</label>
+  </div>
+  <div class="block gender " ng-init="userType='user'">
+    <input type="radio" name="userType" id="user" value="user" ng-model="userType" />
+    <label for="user">user</label>
+    <input type="radio" name="userType" value="admin" id="admin" ng-model="userType" />
+    <label for="admin">admin</label>
+  </div>
+  <div class="block">
+    <label class="inputField">Image</label>
+    <input class="input" id="id" type="file" accept="image/*" name="file" ngf-select ng-model="pic" required="true" />
+    <span id="imageError" class="errorMessage"></span>
+  </div>
+  <div class="signUpBlock block">
+    <input class="signUp" type="submit" value="Create" />
+  </div>
+</form>

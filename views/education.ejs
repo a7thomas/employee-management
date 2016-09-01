@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link href="/images/aa.png" rel="shortcut icon" />
+  <script src="/javascripts/profileValidation.js"></script>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/styleProfile.css" />
+  <input type="hidden" id="refreshed" value="no">
+  <script type="text/javascript">
+    onload = function() {
+      var e = document.getElementById("refreshed");
+      if (e.value == "no") e.value = "yes";
+      else {
+        e.value = "no";
+        location.reload();
+      }
+    }
+  </script>
+</head>
+<title>Education</title>
+<% include header %>
+
+  <body>
+    <% include sideBar %>
+      <div class="right">
+        <div class="intro">
+          <div>
+            <%= d.personalInfo.firstName.replace(/^./, function(str){ return str.toUpperCase(); }); %>
+          </div>
+          <div>
+            <%= d.designation %>
+          </div>
+        </div>
+        <div class="fieldName">
+          <h2>Education</h2>
+          <form method="post">
+            <table class="table">
+              <tr>
+                <th><input class="edit" type="button" name="edits" value="edit" onclick="edit()" /></th>
+              </tr>
+              <tr>
+                <td>Tenth grade:(in %)</td>
+                <td><input class="input" type="number" name="tenthPercentage" value="<%= d.education.tenthPercentage %>" readonly="true" /></td>
+              </tr>
+              <tr>
+                <td>+2 grade:(in %)</td>
+                <td><input class="input" type="number" name="twelfthPercentage" value="<%= d.education.twelfthPercentage %>" readonly="true" /></td>
+              </tr>
+              <tr>
+                <td>Degree</td>
+                <td><input class="input" type="text" name="degree" value="<%= d.education.degree %>" readonly="true" /></td>
+              </tr>
+              <tr>
+                <td>other</td>
+                <td><input class="input" type="text" name="other" value="<%= d.education.other %>" readonly="true" /></td>
+              </tr>
+            </table>
+            <div class="signUpBlock block">
+              <input class="signUp" type="submit" id="update" value="Update" />
+            </div>
+        </div>
+      </div>
+  </body>
+
+</html>

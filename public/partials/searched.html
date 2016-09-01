@@ -1,0 +1,78 @@
+<div class="view">
+  <div class = "sidebar">
+    <div class="left">
+      <div>
+        <img src= "/uploads/{{details.imagePath}}" alt="img" class="profilePic" />
+      </div>
+    </div> 
+  </div>   
+  <div class="right">  
+    <div class="intro">
+      <div>{{details.personalInfo.firstName}}</div>
+      <div>{{details.designation}}</div>
+    </div>
+    <div class="fieldName">
+      <h2>Personal information</h2>
+      <table>
+        <tr>
+          <th class="value">Value</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>First name:</td>
+          <td>
+            <input class="input" type="text" id="input" name="firstName" ng-model="details.personalInfo.firstName" readonly="true"/>
+          </td>
+        </tr>
+        <tr>
+          <td>Last name:</td>
+          <td>
+            <input class="input" type="text" name="lastName" ng-model="details.personalInfo.lastName" readonly="true"/>
+          </td>
+        </tr>
+        <tr>
+          <td>Email:</td>
+          <td>{{details.email}}</td>
+        </tr>
+        <tr>
+          <td>Gender:</td>
+          <td>{{details.personalInfo.gender}}</td>
+        </tr>
+        <tr>
+          <td>Date of birth:</td>
+          <td>
+            <input class="input" type="date" name="dob" ng-model="dob" readonly="true"/>
+          </td>
+        </tr>
+        <tr>
+          <td>Address:</td>
+          <td>
+            <textarea class="input" name="address" readonly="true">{{details.personalInfo.address}}</textarea>
+          </td>
+        </tr>
+        <tr>
+          <td>Mobile no:</td>
+          <td>
+            <input class="input" type="text" name="phNo" ng-model="details.personalInfo.mobileNo" readonly="true" id="phNo"/>
+          </td>
+        </tr>
+         <tr>
+        <td>Tenth grade:</td>
+        <td><input class="input" type="number" name="tenthPercentage" ng-model="details.education.tenthPercentage" readonly="true" /></td>
+      </tr>
+      <tr>
+        <td>+2 grade:</td>
+        <td><input class="input" type="number" name="twelfthPercentage" ng-model="details.education.twelfthPercentage" readonly="true"/></td>
+      </tr>
+      <tr>
+        <td>Degree</td>
+        <td><input class="input" type="text" name="Degree" ng-model="details.education.degree" readonly="true" /></td>
+      </tr>
+      <tr>
+        <td>other</td>
+        <td><input class="input" type="text" name="Other" ng-model="details.education.other" readonly="true"/></td>
+      </tr>
+      </table>
+    </div> 
+  </div>
+</div>  

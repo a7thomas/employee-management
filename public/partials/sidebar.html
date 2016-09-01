@@ -1,0 +1,24 @@
+<div class="left">
+  <div>
+    <img src= "/uploads/{{details.imagePath}}" alt="img" class="profilePic"/>
+    <input value="Edit pic" type="file" file-model="myFile" class="inputFields" />
+    <button  ng-click ='changePic()' class="change">Change pic</button>
+  </div>
+  <div class="mainWrapper">
+    <div>
+      <div class="heading">Employee details</div>
+      <div class="subHeading">
+        <a href="#/user-home/personal"><div class="field">Personal</div></a>
+        <a href="#/user-home/account"><div class="field">Accounts</div></a>
+        <a href="#/user-home/education"><div class="field">Education</div></a>
+      </div>   
+    </div>
+    <div>
+      <div class="heading">Actions</div>
+      <div class="subHeading"> 
+        <a href="#/user-home/program"><div class="field">Upcoming programs</div></a>
+        <a href="#/change-password"><div class="field">Change password</div></a>
+      </div>  
+    </div>
+  </div>
+</div>
